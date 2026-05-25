@@ -1,0 +1,170 @@
+.account-layout {
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.account-foreground {
+  position: relative;
+  z-index: 10;
+  padding-bottom: 4rem;
+}
+
+/* Navbar Classes */
+.account-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 5%;
+  border-bottom: 1px solid #222;
+}
+
+.nav-brand {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-logout-btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-logout-btn:hover {
+  border-color: #666;
+}
+
+/* Main Content Layout */
+.account-main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6vh;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.account-heading {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.account-card {
+  background-color: #111111b2;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+/* Form & Display Sections */
+.form-section {
+  margin-bottom: 24px;
+}
+
+.form-section-spaced {
+  margin-bottom: 32px;
+}
+
+.field-label {
+  display: block;
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.display-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.display-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.display-email {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* Editing UI */
+.edit-wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.edit-input {
+  flex: 1;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #888;
+  border: 1px solid #333;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-text {
+  background: transparent;
+  color: #888;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Stats Section */
+.stats-container {
+  display: flex;
+  gap: 48px;
+  border-top: 1px solid #222;
+  padding-top: 24px;
+}
+
+.stat-large {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.stat-medium {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 10px;
+}
