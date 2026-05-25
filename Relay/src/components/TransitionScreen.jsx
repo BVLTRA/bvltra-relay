@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const TransitionScreen = ({ name, onComplete }) => {
+const TransitionScreen = ({ user, onComplete }) => {
   useEffect(() => {
     // Timer is set to 2s to match the CSS animation duration
     const timer = setTimeout(() => {
@@ -9,6 +9,8 @@ const TransitionScreen = ({ name, onComplete }) => {
     
     return () => clearTimeout(timer);
   }, [onComplete]);
+
+  const displayName = user && user.name ? user.name : 'Operator';
 
   return (
     <div style={{
@@ -37,7 +39,7 @@ const TransitionScreen = ({ name, onComplete }) => {
         // Locked strictly to 2s
         animation: 'textFade 2s ease-in-out forwards'
       }}>
-        Welcome back, <span style={{ fontWeight: '600' }}>{name}</span>.
+        Welcome back, <span style={{ fontWeight: '600' }}>{displayName}</span>.
       </h1>
     </div>
   );
