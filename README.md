@@ -1,6 +1,6 @@
 # RELAY // Operational Fault Logging & Team Communication
 
-An operational fault-logging and communication handoff system for teams that prioritizes real-time visibility, structured incident response, and seamless team collaboration.
+Under construction - An operational fault-logging and communication handoff system for teams that prioritizes real-time visibility, structured incident response, and seamless team collaboration. Designed for the South African Brewery.
 
 ## Description
 
@@ -10,7 +10,7 @@ The platform leverages modern web technologies to deliver a responsive, interact
 
 ---
 
-## Screenshots
+## Screenshots (To Be Updated)
 
 ### Dashboard Overview
 ![Dashboard](./public/images/dashboard-overview.png)
@@ -34,7 +34,7 @@ The platform leverages modern web technologies to deliver a responsive, interact
 
 ### Project Links:
 - **[GitHub Repository](https://github.com/BVLTRA/bvltra-relay)**
-- **[Live Demo](#)** *(link to deployed instance)*
+- **[Live Demo](#)** *(link to deployed instance to be update)*
 - **[API Documentation](#api-endpoints)** *(see below)*
 
 ---
@@ -476,7 +476,6 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 - **React & Node.js communities** - For the robust frameworks and tooling.
 - **Express.js & Middleware ecosystem** - For powerful routing and composable middleware.
 - **JWT / OAuth2 standards** - For industry-standard authentication practices.
-- **Discord, Slack, Twilio** - For reliable APIs and extensive integrations.
 - **MongoDB & Mongoose** - For flexible data modeling and query capabilities.
 - **All contributors and testers** - For feedback, bug reports, and collaborative spirit.
 
