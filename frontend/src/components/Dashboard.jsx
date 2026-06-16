@@ -30,11 +30,11 @@ const Dashboard = () => {
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef(null);
 
-  useEffect(() => {
-    if (!token || !user) navigate("/");
+ useEffect(() => {
+    if (!token || !user) navigate('/');
     else fetchFaults();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   const fetchFaults = async () => {
     try {
       const response = await fetch("https://relay-rsqr.onrender.com/api/faults", {

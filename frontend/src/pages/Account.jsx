@@ -9,7 +9,7 @@ const Account = () => {
   const token = localStorage.getItem('gridlock_token');
   
   // Pull the operator's data from local storage
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('gridlock_user')));
+  const [user] = useState(JSON.parse(localStorage.getItem('gridlock_user')));
   const [stats, setStats] = useState({ total: 0, open: 0, resolved: 0 });
   const [isLoading, setIsLoading] = useState(true);
 
