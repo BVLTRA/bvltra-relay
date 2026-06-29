@@ -1,20 +1,17 @@
-// Credits:
-// - Gemini AI for creating the initial version of this component based on a description of the desired effect.
-
 import React, { useEffect, useRef } from 'react';
 
 const GlowOrbs = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
+    // Check if the device has a mouse. If not (like on mobile), stop here.
+    const isMouseDevice = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    if (!isMouseDevice) return;
+
     const handleMouseMove = (e) => {
       if (!containerRef.current) return;
-
-      // 1. Calculate how far the mouse is from the center (from -1 to 1)
       const x = (e.clientX / window.innerWidth - 0.5) * 2;
       const y = (e.clientY / window.innerHeight - 0.5) * 2;
-
-      // 2. Pass those normalized values to CSS
       containerRef.current.style.setProperty('--mouse-x', x);
       containerRef.current.style.setProperty('--mouse-y', y);
     };
@@ -34,7 +31,7 @@ const GlowOrbs = () => {
         overflow: 'hidden'
       }}
     >
-      {/* Orb 1: The wide, slow, deep background glow */}
+      {/* Orb 1 */}
       <div style={{
         position: 'absolute',
         top: '50%', left: '50%',
@@ -42,12 +39,12 @@ const GlowOrbs = () => {
         borderRadius: '50%',
         backgroundColor: 'rgba(3, 12, 65, 0.72)',
         filter: 'blur(120px)',
-        // The magic: Center it (-50%), then pull it a max of 40px towards the mouse
         transform: 'translate(calc(-50% + var(--mouse-x, 0) * 40px), calc(-50% + var(--mouse-y, 0) * 40px))',
-        transition: 'transform 0.8s ease-out'
+        transition: 'transform 0.8s ease-out',
+        willChange: 'transform' // Forces GPU acceleration
       }} />
 
-      {/* Orb 2: Smaller, slightly brighter, tighter rubber band */}
+      {/* Orb 2 */}
       <div style={{
         position: 'absolute',
         top: '60%', left: '60%',
@@ -55,9 +52,9 @@ const GlowOrbs = () => {
         borderRadius: '50%',
         backgroundColor: 'rgba(6, 63, 4, 0.36)',
         filter: 'blur(80px)',
-        // Pulls a max of 90px towards the mouse, making it feel "closer" to the glass
         transform: 'translate(calc(-50% + var(--mouse-x, 0) * 90px), calc(-50% + var(--mouse-y, 0) * 90px))',
-        transition: 'transform 0.15s ease-out'
+        transition: 'transform 0.15s ease-out',
+        willChange: 'transform' // Forces GPU acceleration
       }} />
     </div>
   );

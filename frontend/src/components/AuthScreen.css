@@ -188,3 +188,25 @@
   color: #ff8a8a; /* A soft, readable red */
   border: 1px solid rgba(255, 77, 77, 0.2);
 }
+
+.login-box {
+  background-color: #111111b2; 
+  padding: 3rem; 
+  border-radius: 12px; 
+  border: 1px solid #333; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  max-width: 450px; 
+  width: 100%;
+  z-index: 10;
+}
+
+/* On mobile, strip the padding */
+@media (max-width: 600px) {
+  .login-box {
+    padding: 1.5rem;
+    background-color: transparent; 
+    border: none;
+  }
+}
